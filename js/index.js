@@ -27,7 +27,14 @@ function calculateAll() {
   }
 
   // ITERATION 3
-  //... your code goes here
+
+  let totalValue = 0;
+  for (let value = 0; value < allProducts.length; value +=1) {
+    totalValue += +updateSubtotal(allProducts[value]).innerText;
+  }
+  const total = document.querySelector('#total-value span');
+  total.innerText = totalValue;
+  return total;
 }
 
 // ITERATION 4
